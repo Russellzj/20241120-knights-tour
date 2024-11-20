@@ -1,43 +1,36 @@
-# C3ProjectTemplate
+# Knights Tour Kata
 
-See solutions in different languages in the "Templates" directory. Once you decide which language you'd like to use,
-simply open that directory in your favorite IDE, and you should be able to run the included unit tests "out of the box".
+## The Challenge
+Write a program that generates the moves a Knight makes on a standard 8x8 chessboard such that the knight completes the Knight’s Tour. In the Knight’s Tour a knight starts at a square and visits each square on the board without landing on any square twice. 
+* A knight in chess moves in a L shape, (2 spaces in vertical / horizontal), and 1 space in (horizontal / vertical)
+* Find the first solution for a starting point if one exists
+* Display the final solution with step numbers in a grid
 
-## Duplicating this Repo
+## Extra Credit
+* Make the size of the board configurable
+* Find all the possible solutions for the starting point
+* Find optimizations for the solutions
 
-To create a duplicate repository from this one, follow these steps:
+## Concepts
 
-1. Create your new repository. For example, MyNewRepo.
+### Recursion
+My dumb version: 
+- Breaking a problem down into multiple smaller solvable problems, and reusing the same function to solve the smaller problems
+- Need one or more terminal conditions
 
-2. Open Git Bash.
+From AI
+A recursive function is a function that calls itself during its execution. It's made up of two parts:
+- Base case: A stopping condition
+- Recursive step: The function calls itself to solve smaller instances of the problem
 
-3. Create a bare clone of the repository.
+### Backtracking
+My dumb version: 
+- Think of it like following going through a maze, and getting to a dead end.
+- Work your way back to the last possible decision point, and choose the other road
 
-    ```
-    git clone --bare https://github.com/Ingage-Meetup/MyNewRepo.git
-    ```
+From AI
+Backtracking is a problem-solving algorithmic technique used to find all (or some) solutions to a computational problem by incrementally building candidates and abandoning ("backtracking") those candidates as soon as it is determined that they cannot lead to a valid solution.
 
-4. Mirror-push to the new repository.
-  
-    ```
-    cd MyNewRepo.git
-    git push --mirror https://github.com/Ingage-Meetup/MyNewRepo.git
-    ```
-
-5. Remove the temporary local repository you created earlier.
-
-    ```
-    cd ..
-    rm -rf OLD-REPOSITORY.git
-    ```
-
-Your new repository now contains a mirror of this repo.
-
-The recommended IDEs are as follows, but feel free to use whatever IDE you are comfortable with.
-
--   [C#](Templates/C%23) - [Microsoft Visual Studio](https://visualstudio.microsoft.com/vs/community/)
--   [Java](Templates/Java) - [IntelliJ Idea](https://www.jetbrains.com/idea/download) (Community Edition is fine)
--   [JavaScript](Templates/JavaScript) - [Microsoft Visual Studio Code](https://code.visualstudio.com/)
--   [Kotlin](Templates/Kotlin) - [IntelliJ Idea](https://www.jetbrains.com/idea/download) (Community Edition is fine)
--   [Python](Templates/Python) - [Pycharm](https://www.jetbrains.com/pycharm/download/?section=windows) (Community Edition is fine)
--   [TypeScript](Templates/TypeScript) - [Microsoft Visual Studio Code](https://code.visualstudio.com/)
+## Data Types
+- Linked List, List, or Stack
+- 2D Array, List of List
