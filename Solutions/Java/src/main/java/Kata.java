@@ -3,15 +3,24 @@ import java.util.Arrays;
 public class Kata {
 
     public static void main(String[] args) {
-
-        int[][] board = new int[7][7];
-        for (int[] position  : board) {
-            Arrays.fill(position, 0);
+        //GameBoard gameBoard = new GameBoard();
+        int boardSize = 8;
+        GameBoard gameBoard = new GameBoard(boardSize);
+        gameBoard.setStartPosition(0, 0);
+        gameBoard.startFromChosenPosition();
+        /*
+        for (int i = 0; i < boardSize; i++) {
+            for (int j = 0; j < boardSize; j++) {
+                GameBoard gameBoard = new GameBoard(boardSize);
+                gameBoard.setStartPosition(i, j);
+                gameBoard.startFromChosenPosition();
+            }
         }
 
-        if (traveler(0, 0, 1, board)) {
-            System.out.println("Location Accepted: " + 0 + " " + 0);
-        }
+         */
+    }
+}
+
 
         /*
         for (int i = 0; i < board.length; i++) {
@@ -23,9 +32,8 @@ public class Kata {
             }
         }
 
-         */
-    }
-
+            */
+    /*
     private static boolean traveler(int row, int column, int iteration, int[][] board) {
         board[row][column] = iteration;
         printBoard(board);
@@ -47,27 +55,12 @@ public class Kata {
                 }
             }
         }
+        board[row][column] = 0;
         return false;
     }
 
-    static void printBoard(int[][] board) {
-        for (int[] row : board) {
-            for (int column : row) {
-                System.out.print(column + " ");
-            }
-            System.out.println();
-        }
-        System.out.println();
-    }
+     */
 
-    private static boolean isTraveled(int[][] board) {
-        for (int[] row : board) {
-            for (int column : row) {
-                if (column == 0) {
-                    return false;
-                }
-            }
-        }
-        return true;
-    }
-}
+
+
+
